@@ -10,7 +10,8 @@
     "example": "example"
   },
   "scripts": {
-    "test": "flow",
+    "flow": "flow --color always --one-line | grep -v 'not yet supported'",
+    "test": "npm run flow",
     "build": "flow-remove-types src/ -d lib/",
     "prepublish": "npm run build"
   },
